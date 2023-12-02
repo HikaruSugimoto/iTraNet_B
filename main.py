@@ -69,6 +69,7 @@ with open("demo.zip", "rb") as file:
     st.sidebar.markdown(href, unsafe_allow_html=True)
 if(os.path.isfile('demo.zip')):
     os.remove('demo.zip')
+st.sidebar.write('*Please unzip the file before uploading the demo data.')
     
 Tran = st.sidebar.file_uploader("Transcriptome (organ or cell)", type="csv")
 Pro = st.sidebar.file_uploader("Proteome (organ or cell)", type="csv")
